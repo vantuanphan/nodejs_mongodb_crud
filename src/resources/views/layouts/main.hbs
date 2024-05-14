@@ -12,9 +12,25 @@
             <div class="header">
                 {{> header}}
             </div>
-
-            <div class="container">
-                {{{ body }}}
+            
+            <div class="main">
+                <div class="left">
+                    <!-- Default dropend button -->
+                    <div class="btn-group dropend">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            Sản phẩm
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="right container">
+                    {{{ body }}}
+                </div>
             </div>
 
             <div class="footer">
