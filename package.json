@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon --inspect src/index.js",
-    "scss": "node-sass --watch src/resources/scss/app.scss src/public/css/app.css"
+    "scss": "node-sass --watch src/resources/scss/app.scss src/public/css/app.css",
+    "prettier": "lint-staged"
   },
   "repository": {
     "type": "git",
@@ -23,13 +24,24 @@
     "url": "https://github.com/vantuanphan/nodejs_mongodb_crud/issues"
   },
   "homepage": "https://github.com/vantuanphan/nodejs_mongodb_crud#readme",
+  "lint-staged": {
+    "src/**/*.{js,json,scss}": "prettier --single-quote --trailing-comma all --tab-width 4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "dependencies": {
     "express": "^4.19.2",
     "express-handlebars": "^7.1.2"
   },
   "devDependencies": {
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
     "morgan": "^1.10.0",
     "node-sass": "^9.0.0",
-    "nodemon": "^3.1.0"
+    "nodemon": "^3.1.0",
+    "prettier": "^3.2.5"
   }
 }
