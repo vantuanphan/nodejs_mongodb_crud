@@ -1,0 +1,25 @@
+* {
+    margin: 3px;
+}
+
+.main {
+    display: flex;
+}
+
+
+.left a {
+    text-decoration: none; /* Bỏ gạch chân */
+    color: black; /* Chuyển màu thẻ a sang màu đen */
+    border: 1px solid gray; /* Border của thẻ a là màu xám */
+    border-radius: 4px;
+}
+
+.left a:hover {
+    background-color: bisque; 
+    /* Khi di chuột vào thẻ a thì phần background bên trong thẻ a chuyển sang màu xám */
+}
+
+.view-item {
+    margin-top: 16px;
+    
+}

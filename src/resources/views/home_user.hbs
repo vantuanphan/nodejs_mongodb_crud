@@ -1,0 +1,30 @@
+<body>
+    <div class="header_user">
+    {{> header_user}}
+</div>
+
+<div class="mt-4 main_user">
+    <div class="row">
+
+        {{#each male_user}}
+        <div class="col-sm-6 col-lg-4">
+            <div class="card view-item">
+                <img src="{{this.image}}" class="card-img-top" alt="photo">
+                <div class="card-body">
+                    <h5 class="card-title">{{this.name}}</h5>
+                    <p class="card-text">{{this.description}}</p>
+                    <p class="card-text">{{this.color}}</p>
+                    <p class="card-text">{{this.size}}</p>
+                    <p class="card-text">Giá: {{this.price}}</p>
+                    <a href="#" class="btn btn-primary">Mua sản phẩm</a>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+
+    </div>
+</div>
+
+<div class="footer_user">
+    {{> footer_user}}
+</div>
