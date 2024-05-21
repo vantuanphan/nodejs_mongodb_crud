@@ -11,7 +11,7 @@ const Male = new Schema(
         price : { type: Number, required: true  },
         // slug: { type: String, slug: 'name', unique: true },
     },
-    // { timestamps: true },
+    { timestamps: true },
 );
 
 module.exports = mongoose.model('Male', Male);

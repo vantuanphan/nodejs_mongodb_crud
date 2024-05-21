@@ -4,7 +4,15 @@ class AdminControllerMale {
     
     //[GET] /admin/male
     home(req, res, next) {
-        res.render('male');
+        const home = new Male(req.body);
+        home.save()
+        .then(() => res.redirect('/admin'))
+        
+    }
+
+    //[POST] /admin/male/create
+     create(req, res, next) {
+        res.render('maleCreate');
     }
 
 }

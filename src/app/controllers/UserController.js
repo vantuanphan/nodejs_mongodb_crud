@@ -1,4 +1,6 @@
 const Male = require('../models/Male');
+const Female = require('../models/Female');
+
 const { mutipleMongooseToObject } = require('../../until/mongoose');
 
 class UserController {
@@ -12,7 +14,18 @@ class UserController {
                 });
             })
             .catch(next);
+
+        Female.find({})
+            .then(female_user => {
+                res.render('home_user', { 
+                    female_user: mutipleMongooseToObject(female_user)
+                });
+            })
+            .catch(next);
     }
+
+    //[GET] /slug
+    view_details
 
 }
 
